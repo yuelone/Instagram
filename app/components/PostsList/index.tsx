@@ -25,7 +25,7 @@ const PostsList: React.FC<PostProps> = ({
 }) => {
   return (
     <div className="shadow-md pb-4 lg:mb-8">
-      <UserList account={account} avatar={avatar} />
+      <UserList account={account} avatar={avatar} more />
       <Image
         src={photo}
         alt={`Post image by ${account}`}
