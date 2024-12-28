@@ -1,4 +1,5 @@
 import Container from "components/Container";
+import UserList from "components/UserList";
 
 const LimitedTimePost: React.FC = () => {
   return (
@@ -25,7 +26,15 @@ const Home: React.FC = () => {
         <div className="w-full lg:w-[600px]">
           <LimitedTimePost />
         </div>
-        <div className="hidden lg:block lg:w-[424px]">right</div>
+        <div className="hidden lg:block lg:w-[424px]">
+          <UserList
+            avatar="/images/avatar/taeyeon.jpg"
+            account="taeyeon_ss"
+            relatedfollowing="xxx_xxx"
+            showFollow
+            isFollowing
+          />
+        </div>
       </div>
     </Container>
   );
