@@ -1,5 +1,6 @@
 import Container from "components/Container";
 import UserList from "components/UserList";
+import PostsList from "components/PostsList";
 
 const LimitedTimePost: React.FC = () => {
   return (
@@ -25,12 +26,20 @@ const Home: React.FC = () => {
       <div className="flex lg:justify-center">
         <div className="w-full lg:w-[600px]">
           <LimitedTimePost />
+          <PostsList
+            photo="/images/post/taeyeonPostImg_1.jpg"
+            account="taeyeon_ss"
+            avatar="/images/avatar/taeyeon.jpg"
+            description="🎁"
+            likes={345000}
+            createTime="3 days ago"
+          />
         </div>
         <div className="hidden lg:block lg:w-[424px]">
           <UserList
             avatar="/images/avatar/taeyeon.jpg"
             account="taeyeon_ss"
-            relatedfollowing="xxx_xxx"
+            subtitle="xxx_xxx"
             showFollow
             isFollowing
           />

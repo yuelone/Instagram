@@ -1,19 +1,19 @@
-type IUserListProps = {
+type UserListProps = {
   size?: "medium" | "small";
   showFollow?: boolean;
   isFollowing?: boolean;
   account?: string;
-  relatedfollowing?: string;
+  subtitle?: string;
   avatar?: string;
   id?: number;
 };
 
-const UserList: React.FC<IUserListProps> = ({
+const UserList: React.FC<UserListProps> = ({
   size = "small",
   showFollow = false,
   isFollowing = false,
   account,
-  relatedfollowing,
+  subtitle,
   avatar,
   id,
 }) => {
@@ -31,9 +31,12 @@ const UserList: React.FC<IUserListProps> = ({
       ></div>
       <div className="ml-4">
         <p className="font-bold text-sm">{account}</p>
-        <p className="text-gray-400 text-xs">{relatedfollowing} 也在追蹤</p>
+        <p className="text-gray-400 text-xs">
+          {subtitle}
+          {showFollow && " is following"}
+        </p>
       </div>
-      {showFollow && (
+      {showFollow ? (
         <p
           className={`${
             isFollowing ? "text-gray-700" : "text-blue-400"
@@ -41,6 +44,21 @@ const UserList: React.FC<IUserListProps> = ({
         >
           {isFollowing ? "FOLLOWING" : "FOLLOW"}
         </p>
+      ) : (
+        <svg
+          className="ml-auto text-xs font-bold cursor-pointer"
+          aria-label="更多選項"
+          fill="currentColor"
+          height="24"
+          role="img"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <title>更多選項</title>
+          <circle cx="12" cy="12" r="1.5"></circle>
+          <circle cx="6" cy="12" r="1.5"></circle>
+          <circle cx="18" cy="12" r="1.5"></circle>
+        </svg>
       )}
     </div>
   );
