@@ -20,6 +20,27 @@ const LimitedTimePost: React.FC = () => {
   );
 };
 
+const UserProfile: React.FC = () => {
+  return (
+    <div className="mt-8 ml-8 shadow-lg box-border p-2">
+      <UserList
+        account="yuelone_demo"
+        avatar="/images/avatar/user.jpg"
+        size="medium"
+      />
+      <p className="font-bold text-gray-400 mt-4 mx-4 mb-3 text-sm">
+        Suggested for you
+      </p>
+      <UserList
+        account="taeyeon_ss"
+        avatar="/images/avatar/taeyeon.jpg"
+        showFollow
+        isFollowing
+      />
+    </div>
+  );
+};
+
 const Home: React.FC = () => {
   return (
     <Container>
@@ -36,13 +57,7 @@ const Home: React.FC = () => {
           />
         </div>
         <div className="hidden lg:block lg:w-[424px]">
-          <UserList
-            avatar="/images/avatar/taeyeon.jpg"
-            account="taeyeon_ss"
-            subtitle="xxx_xxx"
-            showFollow
-            isFollowing
-          />
+          <UserProfile />
         </div>
       </div>
     </Container>

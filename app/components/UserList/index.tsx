@@ -5,6 +5,7 @@ type UserListProps = {
   account?: string;
   subtitle?: string;
   avatar?: string;
+  more?: boolean;
   id?: number;
 };
 
@@ -15,6 +16,7 @@ const UserList: React.FC<UserListProps> = ({
   account,
   subtitle,
   avatar,
+  more,
   id,
 }) => {
   return (
@@ -33,10 +35,10 @@ const UserList: React.FC<UserListProps> = ({
         <p className="font-bold text-sm">{account}</p>
         <p className="text-gray-400 text-xs">
           {subtitle}
-          {showFollow && " is following"}
+          {showFollow && subtitle && " is following"}
         </p>
       </div>
-      {showFollow ? (
+      {showFollow && (
         <p
           className={`${
             isFollowing ? "text-gray-700" : "text-blue-400"
@@ -44,7 +46,8 @@ const UserList: React.FC<UserListProps> = ({
         >
           {isFollowing ? "FOLLOWING" : "FOLLOW"}
         </p>
-      ) : (
+      )}
+      {more && (
         <svg
           className="ml-auto text-xs font-bold cursor-pointer"
           aria-label="更多選項"
