@@ -2,53 +2,53 @@
   "limitedTimePost": [
     {
       "id": "1",
-      "name": "taeyeon_ss",
-      "avatar": "/images/avatar/taeyeon.jpg"
+      "avatar": "/images/avatar/taeyeon.jpg",
+      "account": "taeyeon_ss"
     },
     {
       "id": "2",
-      "name": "yoona__lim",
-      "avatar": "/images/avatar/yoona.jpg"
+      "avatar": "/images/avatar/yoona.jpg",
+      "account": "yoona__lim"
     },
     {
       "id": "3",
-      "name": "sooyoungchoi",
-      "avatar": "/images/avatar/sooyoung.jpg"
-    },    
+      "avatar": "/images/avatar/sooyoung.jpg",
+      "account": "sooyoungchoi"
+    },
     {
       "id": "4",
-      "name": "515sunnyday",
-      "avatar": "/images/avatar/sunny.jpg"
-    },    
+      "avatar": "/images/avatar/sunny.jpg",
+      "account": "515sunnyday"
+    },
     {
       "id": "5",
-      "name": "yulyulk",
-      "avatar": "/images/avatar/yuri.jpg"
-    },    
+      "avatar": "/images/avatar/yuri.jpg",
+      "account": "yulyulk"
+    },
     {
       "id": "6",
-      "name": "seojuhyun_s",
-      "avatar": "/images/avatar/seohyun.jpg"
-    },    
+      "avatar": "/images/avatar/seohyun.jpg",
+      "account": "seojuhyun_s"
+    },
     {
       "id": "7",
-      "name": "hyoyeon_x_x",
-      "avatar": "/images/avatar/hyoyeon.jpg"
-    },    
+      "avatar": "/images/avatar/hyoyeon.jpg",
+      "account": "hyoyeon_x_x"
+    },
     {
       "id": "8",
-      "name": "tiffanyyoungofficial",
-      "avatar": "/images/avatar/tiffany.jpg"
-    },    
+      "avatar": "/images/avatar/tiffany.jpg",
+      "account": "tiffanyyoungofficial"
+    },
     {
       "id": "9",
-      "name": "dlwlrma",
-      "avatar": "/images/avatar/iu.jpg"
-    },    
+      "avatar": "/images/avatar/iu.jpg",
+      "account": "dlwlrma"
+    },
     {
       "id": "10",
-      "name": "artist_eunji",
-      "avatar": "/images/avatar/enuji.jpg"
+      "avatar": "/images/avatar/enuji.jpg",
+      "account": "artist_eunji"
     }
   ]
 }
