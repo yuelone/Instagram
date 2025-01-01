@@ -4,7 +4,7 @@ import path from "path";
 
 interface Post {
   id: string;
-  name: string;
+  account: string;
   avatar: string;
 }
 
