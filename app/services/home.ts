@@ -2,8 +2,21 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 type LimitedTimePost = {
   id: string;
-  name: string;
   avatar: string;
+  account: string;
+};
+
+type Post = {
+  id: string;
+  avatar: string;
+  account: string;
+  verify: boolean;
+  subtitle: string;
+  photos: string[];
+  likes: number;
+  description: string;
+  hashTags: string[];
+  createTime: string;
 };
 
 export const homeApi = createApi({
@@ -18,7 +31,15 @@ export const homeApi = createApi({
         return "limitedTimePost";
       },
     }),
+    getPost: builder.query<Post[], string | void>({
+      query: (id) => {
+        if (id) {
+          return `post/${id}`;
+        }
+        return "post";
+      },
+    }),
   }),
 });
 
-export const { useGetLimitedTimePostQuery } = homeApi;
+export const { useGetLimitedTimePostQuery, useGetPostQuery } = homeApi;
