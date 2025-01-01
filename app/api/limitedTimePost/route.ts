@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 interface Post {
   id: string;
-  name: string;
+  account: string;
   avatar: string;
 }
 
@@ -50,11 +50,11 @@ export const GET = async () => {
 
 export const POST = async (req: Request) => {
   try {
-    const { name, avatar }: { name: string; avatar: string } = await req.json();
+    const { account, avatar }: { account: string; avatar: string } = await req.json();
 
     const newPost: Post = {
       id: uuidv4(),
-      name,
+      account,
       avatar,
     };
 

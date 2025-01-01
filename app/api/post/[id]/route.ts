@@ -4,19 +4,26 @@ import path from "path";
 
 interface Post {
   id: string;
-  account: string;
   avatar: string;
-}
+  account: string;
+  verify: boolean;
+  subtitle: string;
+  photos: string[];
+  likes: number;
+  description: string;
+  hashTags: string[];
+  createTime: string;
+};
 
 interface Data {
-  limitedTimePost: Post[];
+  post: Post[];
 }
 
 interface GetParams {
   id: string;
 }
 
-const dbPath: string = path.join(process.cwd(), "data", "limitedTimePost.json");
+const dbPath: string = path.join(process.cwd(), "data", "post.json");
 
 const readData = (): Data => {
   const fileContent = fs.readFileSync(dbPath, "utf8");
@@ -32,11 +39,11 @@ export const GET = async (_: Request, { params }: { params: GetParams }) => {
     await new Promise<Data>((resolve, reject) => {
       const timeout = setTimeout(() => {
         reject(new Error("Request timed out"));
-      }, 1500);
+      }, 2000);
 
       try {
         const currentData = readData();
-        findCurrentData = currentData.limitedTimePost.find((post) => post.id === id);
+        findCurrentData = currentData.post.find((post) => post.id === id);
         if (!findCurrentData) {
           reject(new Error("Item not found"));
         } else {

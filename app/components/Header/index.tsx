@@ -15,6 +15,7 @@ const Header: React.FC = () => {
             src="/images/logo.svg"
             fill
             alt="Logo"
+            priority
             onClick={() => router.push("/")}
           />
         </div>
