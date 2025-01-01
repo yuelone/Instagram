@@ -5,10 +5,10 @@ import Loading from "components/Loading";
 import UserList from "components/UserList";
 import PostsList from "components/PostsList";
 
-import { useGetLimitedTimePostQuery } from "services/home";
+import { useGetLimitedTimePostQuery, useGetPostQuery } from "services/home";
 
 const LimitedTimePost: React.FC = () => {
-  const { data, isLoading } = useGetLimitedTimePostQuery();
+  const { isLoading, data } = useGetLimitedTimePostQuery();
 
   return (
     <div className="w-full h-[110px] box-border flex items-center overflow-x-auto overflow-y-hidden shadow-md no-scrollbar lg:my-8">
@@ -30,7 +30,7 @@ const LimitedTimePost: React.FC = () => {
               }}
             ></div>
             <p className="text-xs mt-1 text-center w-[56px] truncate overflow-hidden whitespace-nowrap mx-auto">
-              {item.name}
+              {item.account}
             </p>
           </div>
         ))}
@@ -60,19 +60,34 @@ const UserProfile: React.FC = () => {
 };
 
 const Home: React.FC = () => {
+  const { isLoading, data } = useGetPostQuery();
+
   return (
     <Container>
       <div className="flex lg:justify-center">
         <div className="w-full lg:w-[600px]">
           <LimitedTimePost />
-          <PostsList
-            photo="/images/post/taeyeonPostImg_1.jpg"
-            account="taeyeon_ss"
-            avatar="/images/avatar/taeyeon.jpg"
-            description="🎁"
-            likes={345000}
-            createTime="3 days ago"
-          />
+          {isLoading && !data && (
+            <div className="flex justify-center w-full">
+              <Loading />
+            </div>
+          )}
+          {!isLoading &&
+            data &&
+            data.map((item) => (
+              <PostsList
+                key={item.id}
+                photos={item.photos}
+                account={item.account}
+                verify={item.verify}
+                subtitle={item.subtitle}
+                avatar={item.avatar}
+                description={item.description}
+                likes={item.likes}
+                createTime={item.createTime}
+                hashTags={item.hashTags}
+              />
+            ))}
         </div>
         <div className="hidden lg:block lg:w-[424px]">
           <UserProfile />

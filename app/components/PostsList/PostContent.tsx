@@ -1,7 +1,7 @@
 type PostContentProps = {
   likes: number;
   description: string;
-  hashTags?: string;
+  hashTags: string[];
   createTime: string;
   account: string;
 };
@@ -101,7 +101,13 @@ const PostContent: React.FC<PostContentProps> = ({
         <span className="text-sm font-bold inline-block mr-1">{account}</span>
         {description}
       </p>
-      <p className="text-blue-900 text-sm">{hashTags}</p>
+      {hashTags.length > 0 && (
+        <p className="text-blue-900 text-sm">
+          {hashTags.map((tag, index) =>
+            index === hashTags.length - 1 ? `#${tag}` : `#${tag} `
+          )}
+        </p>
+      )}
       <p className="text-gray-400 text-xs font-[500] mt-2">
         View all 999 comments
       </p>
