@@ -1,0 +1,180 @@
+{
+  "post": [
+    {
+      "id": "11",
+      "avatar": "/images/avatar/taeyeon.jpg",
+      "account": "taeyeon_ss",
+      "verify": true,
+      "subtitle": "",
+      "photos": [
+        "/images/post/taeyeon/1.jpg",
+        "/images/post/taeyeon/2.jpg",
+        "/images/post/taeyeon/3.jpg",
+        "/images/post/taeyeon/4.jpg",
+        "/images/post/taeyeon/5.jpg",
+        "/images/post/taeyeon/6.jpg"
+      ],
+      "likes": 375000,
+      "description": "🎁",
+      "hashTags": [],
+      "createTime": "2024/12/24"
+    },
+    {
+      "id": "21",
+      "avatar": "/images/avatar/yoona.jpg",
+      "account": "yoona__lim",
+      "verify": true,
+      "subtitle": "",
+      "photos": [
+        "/images/post/yoona/1.jpg",
+        "/images/post/yoona/2.jpg",
+        "/images/post/yoona/3.jpg",
+        "/images/post/yoona/4.jpg"
+      ],
+      "likes": 1100000,
+      "description": "지난 가을🍂",
+      "hashTags": [],
+      "createTime": "2024/12/23"
+    },
+    {
+      "id": "31",
+      "avatar": "/images/avatar/sooyoung.jpg",
+      "account": "sooyoungchoi",
+      "verify": true,
+      "subtitle": "",
+      "photos": [
+        "/images/post/sooyoung/1.jpg",
+        "/images/post/sooyoung/2.jpg",
+        "/images/post/sooyoung/3.jpg",
+        "/images/post/sooyoung/4.jpg",
+        "/images/post/sooyoung/5.jpg",
+        "/images/post/sooyoung/6.jpg",
+        "/images/post/sooyoung/7.jpg"
+      ],
+      "likes": 190000,
+      "description": "‘Unstoppable’ is dropping soon, I can’t wait for you all to hear it 🚨❤️ まもなく来ますよ。",
+      "hashTags": ["unstoppable", "1030"],
+      "createTime": "2024/10/07"
+    },
+    {
+      "id": "41",
+      "avatar": "/images/avatar/sunny.jpg",
+      "account": "515sunnyday",
+      "verify": true,
+      "subtitle": "",
+      "photos": ["/images/post/sunny/1.jpeg", "/images/post/sunny/2.jpeg"],
+      "likes": 185000,
+      "description": "추억이 또 늘었어!",
+      "hashTags": ["GG4EVA"],
+      "createTime": "2022/09/05"
+    },
+    {
+      "id": "51",
+      "avatar": "/images/avatar/yuri.jpg",
+      "account": "yulyulk",
+      "verify": true,
+      "subtitle": "환상의 섬 Jeju Island",
+      "photos": [
+        "/images/post/yuri/1.jpg",
+        "/images/post/yuri/2.jpg",
+        "/images/post/yuri/3.jpg",
+        "/images/post/yuri/4.jpg",
+        "/images/post/yuri/5.jpg",
+        "/images/post/yuri/6.jpg",
+        "/images/post/yuri/7.jpg",
+        "/images/post/yuri/8.jpg",
+        "/images/post/yuri/9.jpg",
+        "/images/post/yuri/10.jpg"
+      ],
+      "likes": 140000,
+      "description": "제주의 따듯한 겨울을 잘 느끼고 있는 중입니다 🌅",
+      "hashTags": [],
+      "createTime": "2022/09/05"
+    },
+    {
+      "id": "61",
+      "avatar": "/images/avatar/seohyun.jpg",
+      "account": "seojuhyun_s",
+      "verify": true,
+      "subtitle": "",
+      "photos": [
+        "/images/post/seohyun/1.jpg",
+        "/images/post/seohyun/2.jpg",
+        "/images/post/seohyun/3.jpg"
+      ],
+      "likes": 149000,
+      "description": "선책이옵니다😙사랑이 넘치는 커피차 고마워용🌹",
+      "hashTags": ["남주의첫날밤을가져버렸다"],
+      "createTime": "2024/11/29"
+    },
+    {
+      "id": "71",
+      "avatar": "/images/avatar/hyoyeon.jpg",
+      "account": "hyoyeon_x_x",
+      "verify": true,
+      "subtitle": "",
+      "photos": [
+        "/images/post/hyoyeon/1.jpg",
+        "/images/post/hyoyeon/2.jpg",
+        "/images/post/hyoyeon/3.jpg"
+      ],
+      "likes": 108000,
+      "description": "See u in Jakarta💛 🛫🛫🛫🛫🛫",
+      "hashTags": [],
+      "createTime": "2024/12/12"
+    },
+    {
+      "id": "81",
+      "avatar": "/images/avatar/tiffany.jpg",
+      "account": "tiffanyyoungofficial",
+      "verify": true,
+      "subtitle": "",
+      "photos": ["/images/post/tiffany/1.jpg"],
+      "likes": 185000,
+      "description": "🎬",
+      "hashTags": [],
+      "createTime": "2024/10/25"
+    },
+    {
+      "id": "91",
+      "avatar": "/images/avatar/iu.jpg",
+      "account": "dlwlrma",
+      "verify": true,
+      "subtitle": "",
+      "photos": [
+        "/images/post/iu/1.jpg",
+        "/images/post/iu/2.jpg",
+        "/images/post/iu/3.jpg",
+        "/images/post/iu/4.jpg",
+        "/images/post/iu/5.jpg",
+        "/images/post/iu/6.jpg",
+        "/images/post/iu/7.jpg",
+        "/images/post/iu/8.jpg",
+        "/images/post/iu/9.jpg"
+      ],
+      "likes": 3670000,
+      "description": "또 보고 싶당\n헐콘 in Taipei♥️",
+      "hashTags": [],
+      "createTime": "2024/04/15"
+    },
+    {
+      "id": "101",
+      "avatar": "/images/avatar/enuji.jpg",
+      "account": "artist_eunji",
+      "verify": true,
+      "subtitle": "",
+      "photos": [
+        "/images/post/enuji/1.jpg",
+        "/images/post/enuji/2.jpg",
+        "/images/post/enuji/3.jpg",
+        "/images/post/enuji/4.jpg",
+        "/images/post/enuji/5.jpg",
+        "/images/post/enuji/6.jpg"
+      ],
+      "likes": 68000,
+      "description": "나는야트리도둑🎄",
+      "hashTags": [],
+      "createTime": "2024/11/21"
+    }
+  ]
+}
