@@ -1,21 +1,39 @@
+"use client";
+
 import Container from "components/Container";
+import Loading from "components/Loading";
 import UserList from "components/UserList";
 import PostsList from "components/PostsList";
 
+import { useGetLimitedTimePostQuery } from "services/home";
+
 const LimitedTimePost: React.FC = () => {
+  const { data, isLoading } = useGetLimitedTimePostQuery();
+
   return (
     <div className="w-full h-[110px] box-border flex items-center overflow-x-auto overflow-y-hidden shadow-md no-scrollbar lg:my-8">
-      <div className="text-center">
-        <div
-          className="w-[56px] h-[56px] p-[3px] ring-2 border-2 border-white ring-red-500 rounded-full mx-[11px] overflow-hidden"
-          style={{
-            backgroundImage: "url('/images/avatar/taeyeon.jpg')",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        ></div>
-        <p className="text-xs mt-1">taeyeon_ss</p>
-      </div>
+      {isLoading && !data && (
+        <div className="flex justify-center w-full">
+          <Loading />
+        </div>
+      )}
+      {!isLoading &&
+        data &&
+        data.map((item) => (
+          <div className="text-center" key={item.id}>
+            <div
+              className="w-[56px] h-[56px] p-[3px] ring-2 border-2 border-white ring-red-500 rounded-full mx-[11px] overflow-hidden"
+              style={{
+                backgroundImage: `url(${item.avatar})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }}
+            ></div>
+            <p className="text-xs mt-1 text-center w-[56px] truncate overflow-hidden whitespace-nowrap mx-auto">
+              {item.name}
+            </p>
+          </div>
+        ))}
     </div>
   );
 };
