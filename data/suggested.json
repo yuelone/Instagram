@@ -1,0 +1,36 @@
+{
+  "suggested": [
+    {
+      "id": "12",
+      "avatar": "/images/avatar/taeyeon.jpg",
+      "account": "taeyeon_ss",
+      "verify": true,
+      "subtitle": "Followed by xxx...",
+      "isFollowing": true
+    },
+    {
+      "id": "92",
+      "avatar": "/images/avatar/iu.jpg",
+      "account": "dlwlrma",
+      "verify": true,
+      "subtitle": "Followed by kkk + 16 ...",
+      "isFollowing": true
+    },
+    {
+      "id": "112",
+      "avatar": "/images/avatar/karina.jpg",
+      "account": "katarinabluu",
+      "verify": true,
+      "subtitle": "Followed by ttt + 20 n...",
+      "isFollowing": false
+    },
+    {
+      "id": "122",
+      "avatar": "/images/avatar/winter.jpg",
+      "account": "imwinter",
+      "verify": true,
+      "subtitle": "Followed by xxx...",
+      "isFollowing": false
+    }
+  ]
+}

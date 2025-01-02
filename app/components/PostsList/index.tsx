@@ -104,6 +104,7 @@ const PostsList: React.FC<PostProps> = ({
       )}
       <PostContent
         account={account}
+        verify={verify}
         likes={likes}
         description={description}
         hashTags={hashTags}

@@ -19,6 +19,15 @@ type Post = {
   createTime: string;
 };
 
+type Suggested = {
+  id: string;
+  avatar: string;
+  account: string;
+  verify: boolean;
+  subtitle: string;
+  isFollowing: boolean
+};
+
 export const homeApi = createApi({
   reducerPath: "homeApi",
   baseQuery: fetchBaseQuery({ baseUrl: "/api/" }),
@@ -39,7 +48,17 @@ export const homeApi = createApi({
         return "post";
       },
     }),
+    getSuggested: builder.query<Suggested[], void>({
+      query: () => "suggested"
+    }),
+    updateSuggested: builder.mutation<Suggested, Partial<Suggested>>({
+      query: (updatedSuggested) => ({
+        url: `suggested/${updatedSuggested.id}`,
+        method: "PATCH",
+        body: updatedSuggested,
+      }),
+    }),
   }),
 });
 
-export const { useGetLimitedTimePostQuery, useGetPostQuery } = homeApi;
+export const { useGetLimitedTimePostQuery, useGetPostQuery, useGetSuggestedQuery, useUpdateSuggestedMutation } = homeApi;
