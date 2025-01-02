@@ -17,6 +17,8 @@ import {
   useGetSuggestedQuery,
 } from "services/home";
 
+import { useGetUserQuery } from "services/user";
+
 const LimitedTimePost: React.FC = () => {
   const { isLoading: limitedTimePostDataLoading, data: limitedTimePostData } =
     useGetLimitedTimePostQuery();
@@ -53,6 +55,9 @@ const UserProfile: React.FC = () => {
   const { isLoading: serviceSuggestedLoading, data: serviceSuggestedData } =
     useGetSuggestedQuery();
 
+  const { isLoading: serviceUserLoading, data: serviceUserData } =
+    useGetUserQuery();
+
   const dispatch = useAppDispatch();
 
   const suggestedData = useSuggestedData();
@@ -65,11 +70,20 @@ const UserProfile: React.FC = () => {
 
   return (
     <div className="mt-8 ml-8 shadow-lg box-border p-2">
-      <UserList
-        account="yuelone_demo"
-        avatar="/images/avatar/user.jpg"
-        size="medium"
-      />
+      {serviceUserLoading && !serviceUserData && (
+        <div className="flex justify-center w-full">
+          <Loading />
+        </div>
+      )}
+      {!serviceUserLoading && serviceUserData && (
+        <UserList
+          account={serviceUserData.account}
+          avatar={serviceUserData.avatar}
+          subtitle={serviceUserData.subtitle}
+          isFollowing={serviceUserData.isFollowing}
+          size="medium"
+        />
+      )}
       <p className="font-bold text-gray-400 mt-4 mx-4 mb-3 text-sm">
         Suggested for you
       </p>

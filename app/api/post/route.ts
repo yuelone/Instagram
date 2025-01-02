@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
-import fs from "fs";
+
 import path from "path";
+
+import readDataWithTimeout from "utils/readDataWithTimeout"
 
 interface Post {
   id: string;
@@ -21,29 +23,10 @@ interface Data {
 
 const dbPath: string = path.join(process.cwd(), "data", "post.json");
 
-const readData = (): Data => {
-  const fileContent = fs.readFileSync(dbPath, "utf8");
-  return JSON.parse(fileContent) as Data;
-};
-
 export const GET = async () => {
   try {
-    const data = await new Promise<Data>((resolve, reject) => {
-      const timeout = setTimeout(() => {
-        reject(new Error("Request timed out"));
-      }, 2000);
-
-      try {
-        const result = readData();
-        resolve(result);
-      } catch (error) {
-        reject(error);
-      } finally {
-        clearTimeout(timeout);
-      }
-    });
-
-    return NextResponse.json(data.post);
+    const response = (await readDataWithTimeout<Data>(dbPath, 2000)).post
+    return NextResponse.json(response);
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : "Unknown error";
     return NextResponse.json({ message }, { status: 500 });
