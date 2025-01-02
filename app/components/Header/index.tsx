@@ -7,7 +7,7 @@ const Header: React.FC = () => {
   const router = useRouter();
 
   return (
-    <header className="sticky top-0 bg-white border-b-[1px] border-gray-300">
+    <header className="sticky top-0 bg-white border-b-[1px] border-gray-300 z-50">
       <div className="flex justify-between items-center h-[60px] px-2 box-border lg:max-w-[1024px] lg:mx-auto lg:px-0">
         <div className="relative w-[100px] h-[50px]">
           <Image
