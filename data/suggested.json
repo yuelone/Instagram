@@ -31,6 +31,22 @@
       "verify": true,
       "subtitle": "Followed by xxx...",
       "isFollowing": false
+    },
+    {
+      "id": "232",
+      "avatar": "/images/avatar/jaychou.jpg",
+      "account": "jaychou",
+      "verify": true,
+      "subtitle": "Followed by ttt + 20 n...",
+      "isFollowing": false
+    },
+    {
+      "id": "242",
+      "avatar": "/images/avatar/gd.jpg",
+      "account": "xxxibgdrgn",
+      "verify": true,
+      "subtitle": "Followed by xxx...",
+      "isFollowing": false
     }
   ]
 }
