@@ -18,7 +18,7 @@ This is an Instagram Clone built with Next.js. It demonstrates frontend developm
 
 You can explore a live demo of the Instagram Clone at the following link:
 
-- [Instagram Clone Demo](#) *(https://instagram-zeta-tawny.vercel.app/)*
+- [Instagram Clone Demo](https://instagram-zeta-tawny.vercel.app/)
 
 This demo showcases the main features such as dynamic carousel, post creation, and user interaction.
 
