@@ -14,6 +14,14 @@ This is an Instagram Clone built with Next.js. It demonstrates frontend developm
 - **Redux Toolkit** - Manages application state.
 - **fs (File System)** - Local database management with Node.js.
 
+## Demo
+
+You can explore a live demo of the Instagram Clone at the following link:
+
+- [Instagram Clone Demo](#) *(https://instagram-zeta-tawny.vercel.app/)*
+
+This demo showcases the main features such as dynamic carousel, post creation, and user interaction.
+
 ## Installation & Running
 
 ```bash
