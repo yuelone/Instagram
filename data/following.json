@@ -1,0 +1,144 @@
+{
+  "following": [
+    {
+      "id": "12",
+      "avatar": "/images/avatar/taeyeon.jpg",
+      "account": "taeyeon_ss",
+      "verify": true,
+      "isFollowing": true
+    },
+    {
+      "id": "2",
+      "avatar": "/images/avatar/yoona.jpg",
+      "account": "yoona__lim",
+      "verify": true,
+      "isFollowing": true
+    },
+    {
+      "id": "3",
+      "avatar": "/images/avatar/sooyoung.jpg",
+      "account": "sooyoungchoi",
+      "verify": true,
+      "isFollowing": true
+    },
+    {
+      "id": "4",
+      "avatar": "/images/avatar/sunny.jpg",
+      "account": "515sunnyday",
+      "verify": true,
+      "isFollowing": true
+    },
+    {
+      "id": "5",
+      "avatar": "/images/avatar/yuri.jpg",
+      "account": "yulyulk",
+      "verify": true,
+      "isFollowing": true
+    },
+    {
+      "id": "6",
+      "avatar": "/images/avatar/seohyun.jpg",
+      "account": "seojuhyun_s",
+      "verify": true,
+      "isFollowing": true
+    },
+    {
+      "id": "7",
+      "avatar": "/images/avatar/hyoyeon.jpg",
+      "account": "hyoyeon_x_x",
+      "verify": true,
+      "isFollowing": true
+    },
+    {
+      "id": "8",
+      "avatar": "/images/avatar/tiffany.jpg",
+      "account": "tiffanyyoungofficial",
+      "verify": true,
+      "isFollowing": true
+    },
+    {
+      "id": "10",
+      "avatar": "/images/avatar/eunji.jpg",
+      "account": "artist_eunji",
+      "verify": true,
+      "isFollowing": true
+    },
+    {
+      "id": "92",
+      "avatar": "/images/avatar/iu.jpg",
+      "account": "dlwlrma",
+      "verify": true,
+      "isFollowing": true
+    },
+    {
+      "id": "132",
+      "avatar": "/images/avatar/yuriOfficial.jpg",
+      "account": "kwonyuri_official",
+      "verify": false,
+      "isFollowing": true
+    },
+    {
+      "id": "142",
+      "avatar": "/images/avatar/taeyeonOfficial.jpg",
+      "account": "taeyeon.smofficial",
+      "verify": false,
+      "isFollowing": true
+    },
+    {
+      "id": "152",
+      "avatar": "/images/avatar/yoonaOfficial.jpg",
+      "account": "limyoona__official",
+      "verify": false,
+      "isFollowing": true
+    },
+    {
+      "id": "162",
+      "avatar": "/images/avatar/parkhyoshin.jpg",
+      "account": "parkhyoshin.official",
+      "verify": true,
+      "isFollowing": true
+    },
+    {
+      "id": "172",
+      "avatar": "/images/avatar/kimnayoungOfficial.jpg",
+      "account": "kimnayoung_official",
+      "verify": false,
+      "isFollowing": true
+    },
+    {
+      "id": "182",
+      "avatar": "/images/avatar/kimnayoung.jpg",
+      "account": "nayoung.e",
+      "verify": false,
+      "isFollowing": true
+    },
+    {
+      "id": "192",
+      "avatar": "/images/avatar/an.jpg",
+      "account": "baiannmusic",
+      "verify": true,
+      "isFollowing": true
+    },
+    {
+      "id": "202",
+      "avatar": "/images/avatar/hyoyeonDj.jpg",
+      "account": "dj_hyo_x.x",
+      "verify": false,
+      "isFollowing": true
+    },
+    {
+      "id": "212",
+      "avatar": "/images/avatar/eunjiOfficial.jpg",
+      "account": "jeongeunji_official",
+      "verify": false,
+      "isFollowing": true
+    },
+    {
+      "id": "222",
+      "avatar": "/images/avatar/majiko.jpg",
+      "account": "_majiko_",
+      "verify": true,
+      "isFollowing": true
+    }
+  ]
+}

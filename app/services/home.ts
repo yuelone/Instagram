@@ -51,14 +51,7 @@ export const homeApi = createApi({
     getSuggested: builder.query<Suggested[], void>({
       query: () => "suggested"
     }),
-    updateSuggested: builder.mutation<Suggested, Partial<Suggested>>({
-      query: (updatedSuggested) => ({
-        url: `suggested/${updatedSuggested.id}`,
-        method: "PATCH",
-        body: updatedSuggested,
-      }),
-    }),
   }),
 });
 
-export const { useGetLimitedTimePostQuery, useGetPostQuery, useGetSuggestedQuery, useUpdateSuggestedMutation } = homeApi;
+export const { useGetLimitedTimePostQuery, useGetPostQuery, useGetSuggestedQuery } = homeApi;
