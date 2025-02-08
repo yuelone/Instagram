@@ -3,8 +3,11 @@
 import React, { useEffect } from "react";
 
 import { useAppDispatch } from "hook/customReduxHook";
-import { useUpdateSuggestedMutation } from "services/home";
+
+import { useUpdateIsFollowingMutation } from "services/common";
+
 import { updateSuggested } from "slices/suggested";
+import { removeFollowingUser } from "slices/following";
 
 import Loading from "components/Loading";
 
@@ -18,6 +21,7 @@ type UserListProps = {
   avatar?: string;
   more?: boolean;
   id?: string;
+  type?: string;
 };
 
 const UserList: React.FC<UserListProps> = ({
@@ -30,32 +34,38 @@ const UserList: React.FC<UserListProps> = ({
   avatar,
   more,
   id,
+  type,
 }) => {
   const dispatch = useAppDispatch();
 
   const [
-    updateSuggestedIsFollowing,
+    updateIsFollowing,
     {
-      isLoading: serviceUpdateSuggestedLoading,
-      data: serviceUpdateSuggestedData,
+      isLoading: serviceUpdateIsFollowingLoading,
+      data: serviceUpdateIsFollowingdData,
     },
-  ] = useUpdateSuggestedMutation();
+  ] = useUpdateIsFollowingMutation();
 
-  const handleSuggestedIsFollowing = () => {
-    updateSuggestedIsFollowing({ id });
+  const handleIsFollowingClick = () => {
+    updateIsFollowing({ id, type });
   };
 
   useEffect(() => {
-    if (!serviceUpdateSuggestedLoading && serviceUpdateSuggestedData) {
-      const { id, isFollowing } = serviceUpdateSuggestedData;
-      dispatch(
-        updateSuggested({
-          id,
-          updateData: { isFollowing },
-        })
-      );
+    if (!serviceUpdateIsFollowingLoading && serviceUpdateIsFollowingdData) {
+      const { id, type, isFollowing } = serviceUpdateIsFollowingdData;
+      if (type === "suggested") {
+        dispatch(
+          updateSuggested({
+            id,
+            updateData: { isFollowing },
+          })
+        );
+      }
+      if (type === "following" && isFollowing === false) {
+        dispatch(removeFollowingUser(id));
+      }
     }
-  }, [serviceUpdateSuggestedLoading, serviceUpdateSuggestedData]);
+  }, [serviceUpdateIsFollowingLoading, serviceUpdateIsFollowingdData]);
 
   return (
     <div className="flex h-[70px] items-center box-border px-4">
@@ -102,12 +112,15 @@ const UserList: React.FC<UserListProps> = ({
           className={`${
             isFollowing ? "text-gray-700" : "text-blue-400"
           } ml-auto text-xs font-bold cursor-pointer`}
-          onClick={handleSuggestedIsFollowing}
+          onClick={handleIsFollowingClick}
         >
-          {serviceUpdateSuggestedLoading && <Loading />}
-          {isFollowing && !serviceUpdateSuggestedLoading
-            ? "FOLLOWING"
-            : "FOLLOW"}
+          {serviceUpdateIsFollowingLoading ? (
+            <Loading />
+          ) : isFollowing ? (
+            "FOLLOWING"
+          ) : (
+            "FOLLOW"
+          )}
         </p>
       )}
       {more && (

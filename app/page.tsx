@@ -3,7 +3,9 @@
 import React, { useEffect } from "react";
 
 import { useAppDispatch } from "hook/customReduxHook";
+
 import { setSuggestedList } from "slices/suggested";
+
 import { useSuggestedData } from "selector/suggested";
 
 import Container from "components/Container";
@@ -52,8 +54,11 @@ const LimitedTimePost: React.FC = () => {
 };
 
 const UserProfile: React.FC = () => {
-  const { isLoading: serviceSuggestedLoading, data: serviceSuggestedData } =
-    useGetSuggestedQuery();
+  const {
+    isLoading: serviceSuggestedLoading,
+    data: serviceSuggestedData,
+    refetch,
+  } = useGetSuggestedQuery();
 
   const { isLoading: serviceUserLoading, data: serviceUserData } =
     useGetUserQuery();
@@ -61,6 +66,10 @@ const UserProfile: React.FC = () => {
   const dispatch = useAppDispatch();
 
   const suggestedData = useSuggestedData();
+
+  useEffect(() => {
+    refetch();
+  }, []);
 
   useEffect(() => {
     if (!serviceSuggestedLoading && serviceSuggestedData) {
@@ -98,7 +107,9 @@ const UserProfile: React.FC = () => {
           <UserList
             key={item.id}
             id={item.id}
+            type="suggested"
             account={item.account}
+            verify={item.verify}
             avatar={item.avatar}
             subtitle={item.subtitle}
             showFollow
