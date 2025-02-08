@@ -27,10 +27,6 @@ interface FollowingData {
   following: FollowingItem[];
 }
 
-interface PatchParams {
-  id: string;
-}
-
 const getDbPath = (type: string): string => {
   return path.join(process.cwd(), "data", `${type}.json`);
 };
@@ -63,9 +59,9 @@ const createSuggestedRecord = (
 
 export const PATCH = async (
   request: Request,
-  { params }: { params: PatchParams }
+  props: { params: Promise<{ id: string }> }
 ) => {
-  const { id } = await params;
+  const { id } = await props.params;
   const { type } = await request.json() as { type: "suggested" | "following" };
 
   try {
