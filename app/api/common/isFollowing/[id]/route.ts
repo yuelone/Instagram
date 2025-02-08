@@ -28,8 +28,13 @@ interface FollowingData {
 }
 
 const getDbPath = (type: string): string => {
-  return path.join(process.cwd(), "data", `${type}.json`);
+  if (process.env.VERCEL_ENV) {
+    return path.join("/tmp", `${type}.json`);
+  } else {
+    return path.join(process.cwd(), "data", `${type}.json`);
+  }
 };
+
 
 const readData = <T>(type: string): T => {
   const filePath = getDbPath(type);
