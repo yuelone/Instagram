@@ -22,6 +22,11 @@ You can explore a live demo of the Instagram Clone at the following link:
 
 This demo showcases the main features such as dynamic carousel, post creation, and user interaction.
 
+> [!NOTE]
+> ${{\color{Goldenrod}\Huge{\textsf{  To be Updated \}}}}\$ <br/>
+> Vercel only supports reading from the file system and does not support writing to it.
+> Therefore, I plan to update the project in the future by implementing a database with API connections.
+
 ## Installation & Running
 
 ```bash
